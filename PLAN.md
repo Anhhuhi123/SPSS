@@ -151,7 +151,7 @@ Link Facebook/Email nằm trong `index.html`, đánh dấu `TODO(pending)` (th�
 |---|---|---|---|---|
 | 01 | **Tạo dữ liệu khảo sát** (Data Collection Support) | Dựng Google Form; triển khai khảo sát, thu phản hồi thực tế; theo dõi số phản hồi theo yêu cầu; xuất Excel | Excel (.xlsx) | **từ 1.000đ / phiếu** (tính trên mỗi phiếu trả lời thu được) |
 | 02 | **Xử lý dữ liệu** (Data Processing) | Kiểm tra, làm sạch, mã hóa biến; xử lý thiếu và bất thường theo tiêu chí thống nhất; chuẩn hóa để đưa vào SPSS | Excel + SPSS (.sav) + Cleaning log | **từ 300.000đ** |
-| 03 | **Hỗ trợ phân tích SPSS** (Statistical Analysis) ⭐ Phổ biến nhất | Thống kê mô tả, Cronbach's Alpha, EFA, Pearson, hồi quy tuyến tính, T-test/ANOVA, kiểm tra giả định, giải thích kết quả và hướng dẫn đọc output | File dữ liệu + Syntax (.sps) + Báo cáo kết quả | **từ 500.000đ** |
+| 03 | **Hỗ trợ phân tích SPSS** (Statistical Analysis) | Thống kê mô tả, Cronbach's Alpha, EFA, Pearson, hồi quy tuyến tính, T-test/ANOVA, kiểm tra giả định, giải thích kết quả và hướng dẫn đọc output | Data (.sav) + Syntax (.sps) + Báo cáo | **từ 500.000đ** |
 
 **Mốc báo giá nội bộ cho dịch vụ 03** (không ghi trên web, dùng khi báo giá qua tin nhắn):
 
@@ -530,7 +530,7 @@ mục tiêu (so sánh nhóm / quan hệ / dự báo / đo lường) → loại b
 |---|---|---|
 | 0 | Navbar | Logo Alpha Lab, link Dịch vụ / Quy trình / Hỏi đáp / Liên hệ, nút đổi theme |
 | 1 | Hero (`#top`) | "Make every number make sense." + CTA |
-| 2 | Dịch vụ (`#dich-vu`) | 4 thẻ ngang hàng: 01 → 02 → 03 (thẻ 03 "Phổ biến nhất") + 04 **"Dịch vụ khác"** (báo giá theo yêu cầu). Desktop 4 cột, tablet 2 cột, mobile 1 cột |
+| 2 | Dịch vụ (`#dich-vu`) | 4 thẻ ngang hàng, cùng kiểu (không còn nhãn "Phổ biến nhất"): 01 → 02 → 03 + 04 **"Dịch vụ khác"** (báo giá theo yêu cầu). Khung rộng 1360px; ≥ 1260px 4 cột, 641–1259px 2 cột, mobile 1 cột |
 | 3 | Quy trình (`#quy-trinh`) | Timeline dọc 6 bước, mỗi bước có nhãn đầu ra; đường kẻ tô dần khi cuộn |
 | 4 | Hỏi đáp (`#hoi-dap`) | 7 câu FAQ dạng xổ xuống (`<details>`) |
 | 5 | Liên hệ (`#lien-he`) | Zalo (chính), Facebook, Email |

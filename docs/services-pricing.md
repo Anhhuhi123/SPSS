@@ -17,7 +17,7 @@
 |---|---|---|---|---|
 | 01 | **Tạo dữ liệu khảo sát** (Data Collection Support) | Dựng Google Form; triển khai khảo sát, thu phản hồi thực tế; theo dõi số phản hồi theo yêu cầu; xuất Excel | Excel (.xlsx) | **từ 1.000đ / phiếu** (tính trên mỗi phiếu trả lời thu được) |
 | 02 | **Xử lý dữ liệu** (Data Processing) | Kiểm tra, làm sạch, mã hóa biến; xử lý thiếu và bất thường theo tiêu chí thống nhất; chuẩn hóa để đưa vào SPSS | Excel + SPSS (.sav) + Cleaning log | **từ 300.000đ** |
-| 03 | **Hỗ trợ phân tích SPSS** (Statistical Analysis) ⭐ Phổ biến nhất | Thống kê mô tả, Cronbach's Alpha, EFA, Pearson, hồi quy tuyến tính, T-test/ANOVA, kiểm tra giả định, giải thích kết quả và hướng dẫn đọc output | File dữ liệu + Syntax (.sps) + Báo cáo kết quả | **từ 500.000đ** |
+| 03 | **Hỗ trợ phân tích SPSS** (Statistical Analysis) | Thống kê mô tả, Cronbach's Alpha, EFA, Pearson, hồi quy tuyến tính, T-test/ANOVA, kiểm tra giả định, giải thích kết quả và hướng dẫn đọc output | Data (.sav) + Syntax (.sps) + Báo cáo | **từ 500.000đ** |
 
 **Mốc báo giá nội bộ cho dịch vụ 03** (không ghi trên web, dùng khi báo giá qua tin nhắn):
 
