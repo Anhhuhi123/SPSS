@@ -299,11 +299,11 @@ Link Facebook/Email nằm trong `index.html`, đánh dấu `TODO(pending)` (th�
 | Bước | Tên | Input | Việc chính | Deliverable | Ai |
 |---|---|---|---|---|---|
 | 1 | Research Diagnosis | Đề tài, mô hình, bảng hỏi, yêu cầu GV | Xác định vấn đề, rủi ro, phạm vi | `01_research_assessment.md` | Claude Code nháp, tư vấn viên duyệt |
-| 2 | Research Design | Kết quả bước 1 | Kiểm tra biến, thang đo, cỡ mẫu, chọn phương pháp | `02_research_plan.md`, `02_analysis_plan.md` | Claude Code nháp, tư vấn viên duyệt |
+| 2 | Research Design | Kết quả bước 1 | Kiểm tra biến, thang đo, cỡ mẫu, chọn phương pháp | `02_analysis_plan.md` | Claude Code nháp, tư vấn viên duyệt |
 | 3 | Data Collection | Bảng hỏi đã chốt | Dựng form, kế hoạch tiếp cận, theo dõi tiến độ | Link form, `03_collection_summary.md` | Tư vấn viên (Claude Code soạn form/nội dung). Chỉ thu phiếu từ người trả lời thật |
 | 4 | Data Preparation | Data thô (.xlsx/.csv/Sheet) | Kiểm tra, làm sạch, mã hóa, outlier, đảo chiều | `clean.sav`, `data_dictionary.xlsx`, `04_cleaning_log.md` | Claude Code |
 | 5 | Statistical Analysis | Data sạch + analysis plan | Chạy các kiểm định theo plan, kiểm tra giả định | `.sps`, output, bảng kết quả, project AMOS/PLS | Claude Code (+ tư vấn viên chạy AMOS/SmartPLS GUI nếu cần) |
-| 6 | Interpretation & Handover | Kết quả bước 5 | Giải thích, đối chiếu giả thuyết, dàn ý chương 4, câu hỏi bảo vệ, hướng dẫn tự chạy lại | `06_analysis_report.docx/.md`, `06_tutorial.md`, `06_defense_qa.md` | Claude Code nháp, tư vấn viên duyệt và gửi qua tin nhắn |
+| 6 | Interpretation & Handover | Kết quả bước 5 | Giải thích, đối chiếu giả thuyết, dàn ý chương 4, câu hỏi bảo vệ, hướng dẫn tự chạy lại | `06_report/analysis_report.md`, `06_report/tutorial.md`, `06_report/defense_qa.md` | Claude Code nháp, tư vấn viên duyệt và gửi qua tin nhắn |
 
 **Checkpoint với khách**, bắt buộc xác nhận trước khi đi tiếp:
 
@@ -367,8 +367,8 @@ cases/AL-2611-001/
 ├── case.yaml                 # thông tin đơn + mô hình nghiên cứu + gói + status (nguồn sự thật)
 ├── 00_intake/                # tài liệu khách gửi (bảng hỏi, đề cương, yêu cầu GV)
 ├── 01_assessment.md
-├── 02_research_plan.md
 ├── 02_analysis_plan.md
+├── 03_collection_summary.md
 ├── data/
 │   ├── raw/                  # BẤT BIẾN: không bao giờ sửa file gốc
 │   ├── clean/                # clean.sav, clean.xlsx
@@ -521,7 +521,7 @@ mục tiêu (so sánh nhóm / quan hệ / dự báo / đo lường) → loại b
 
 - **1 file `index.html`** ở gốc repo: HTML + CSS + JS thuần, không build step. Chỉ load Google Fonts (Be Vietnam Pro, JetBrains Mono).
 - Ảnh và logo: `brand/alpha-lab/`.
-- Deploy: **Vercel** (Framework Preset: Other, Root Directory `./`), tự deploy khi push lên `main`. File `.vercelignore` chặn `PLAN.md`, `README.md`, `docs/` để tài liệu nội bộ không lên web.
+- Deploy: **Vercel** (Framework Preset: Other, Root Directory `./`), tự deploy khi push lên `main`. File `.vercelignore` chặn `PLAN.md`, `README.md`, `CLAUDE.md`, `docs/`, `templates/` để tài liệu nội bộ không lên web.
 - Có chế độ sáng/tối (mặc định tối, nhớ lựa chọn của người xem).
 
 ### 7.2 Cấu trúc trang
@@ -563,7 +563,7 @@ Khách nhắn Zalo ──► Tư vấn viên trả lời (script 5.4) ──► 
 Economic_Consulting/            # repo github.com/Anhhuhi123/SPSS
 ├── index.html                   # website (deploy Vercel)
 ├── brand/alpha-lab/             # logo, avatar, ảnh bìa
-├── .vercelignore                # không deploy PLAN.md, README.md, docs/
+├── .vercelignore                # không deploy tài liệu nội bộ (PLAN, CLAUDE, docs, templates)
 ├── PLAN.md                      # file này
 ├── CLAUDE.md                    # hiến pháp cho Claude Code (mục 4 + 6)
 ├── README.md
@@ -590,8 +590,8 @@ Economic_Consulting/            # repo github.com/Anhhuhi123/SPSS
 |---|---|---|---|
 | **0. Duyệt** | Chốt tên, dịch vụ, giá | PLAN.md v5 | ✅ |
 | **2. Website** | `index.html` + brand + deploy Vercel | Web chạy online | ✅ (còn link FB/Email, OG) |
-| **1. Nền tảng tài liệu** | `CLAUDE.md`, `docs/*`, `templates/*` | Quy trình sẵn sàng, nhận khách thủ công được | ⏭️ **Làm tiếp theo** |
-| **3. Skills cho Claude Code** | `.claude/skills/*` | Các lệnh `/new-case` … `/deliver` | Chờ Phase 1 |
+| **1. Nền tảng tài liệu** | `CLAUDE.md`, `docs/*`, `templates/*` | Quy trình sẵn sàng, nhận khách thủ công được | ✅ |
+| **3. Skills cho Claude Code** | `.claude/skills/*` | Các lệnh `/new-case` … `/deliver` | ⏭️ **Làm tiếp theo** |
 | **4. Toolkit Python** | Cài `.venv`, viết module, test bằng mock data | Pipeline cleaning → SPSS → report chạy được | Chờ Phase 1, bạn duyệt cài môi trường |
 | **5. Pilot** | 3–5 khách đầu (ưu đãi), thu feedback | Điều chỉnh giá và quy trình | Chờ Phase 1–4 |
 | **Song song** | Khảo sát xác thực nhu cầu (50–100 sinh viên kinh tế) | Số liệu thật về pain point, dùng làm content | Bất kỳ lúc nào |

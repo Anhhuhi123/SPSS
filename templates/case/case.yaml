@@ -1,0 +1,50 @@
+# Nguồn sự thật của case. Cập nhật status mỗi khi chuyển giai đoạn (xem docs/consulting-sop.md).
+case_id: AL-YYMM-NNN
+status: NEW            # NEW | CONTACTED | DIAGNOSED | QUOTED | DEPOSITED | IN_PROGRESS | QA | DELIVERED | REVISION | CLOSED | LOST | REJECTED
+created: YYYY-MM-DD
+
+client:
+  name: ""
+  contact: zalo        # zalo | facebook | email
+  contact_handle: ""   # SĐT Zalo / link FB / email
+  school: ""
+  major: ""
+  level: Đại học       # Đại học | Thạc sĩ | Tiến sĩ
+  deadline: YYYY-MM-DD
+
+assignment:
+  type: tieu_luan      # bai_tap | tieu_luan | nckh | khoa_luan | luan_van | bai_bao
+  stage: ""            # chưa có mô hình | có bảng hỏi, chưa thu | đang thu | có data thô | đã chạy nhưng lỗi | có kết quả, cần hiểu
+  data_status: ""      # đã đủ | có nhưng thiếu | cần mock data | cần dữ liệu công bố
+  software: SPSS       # SPSS | AMOS | SmartPLS | Stata | chưa rõ
+
+# Tư vấn viên đánh giá khi tiếp nhận (docs/service-scope.md)
+muc_dich_su_dung: ""   # khách dùng data vào việc gì
+quyet_dinh_tu_van: ""  # nhận / không nhận, lý do, gói chọn
+
+packages: []           # thu_thap_du_lieu | xu_ly_du_lieu | phan_tich_spss | mock_data | du_lieu_cong_bo | ra_soat | amos_smartpls | dong_hanh | khac
+spss_tier: ""          # bai_tap | co_ban | tron_bo (chỉ khi có phan_tich_spss)
+
+quote:
+  amount: 0            # VND
+  rush: false          # gấp < 48h: +30%
+  deposit_paid: false  # cọc 50%
+  final_paid: false
+  delivered_on: null
+  delete_data_on: null # 90 ngày sau bàn giao
+
+topic: ""
+model:
+  type: regression     # regression | sem | pls_sem | group_comparison | other
+  constructs: {}
+  #  GC: { name: "Giá cả", items: [GC1, GC2, GC3, GC4], role: IV }
+  #  NT: { name: "Niềm tin", items: [NT1, NT2, NT3, NT4], role: IV, reverse: [NT3] }
+  #  YD: { name: "Ý định mua", items: [YD1, YD2, YD3], role: DV }
+  hypotheses: {}
+  #  H1: "GC → YD (+)"
+  controls: []         # biến nhân khẩu học dùng cho T-test/ANOVA hoặc kiểm soát
+scale: { type: likert, points: 5 }
+sample: { required: 0, current: 0 }
+
+lecturer_requirements: ""   # yêu cầu bắt buộc của GV, ưu tiên hơn ngưỡng mặc định
+flexible_notes: ""          # định dạng bảng, làm tròn, trích dẫn…
