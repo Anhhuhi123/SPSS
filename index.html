@@ -138,7 +138,13 @@ h2{font-size:clamp(30px,5vw,48px);text-align:center}
 .price b{font-size:28px;font-weight:700;letter-spacing:-.02em;line-height:1.1}
 .price span{font-size:14px;color:rgba(var(--fg),.55)}
 .services__note{margin-top:28px;font-size:14px;color:rgba(var(--fg),.55);text-align:center}
-@media (max-width:980px){.services{grid-template-columns:1fr;max-width:560px;margin-inline:auto}}
+.services__wide{grid-column:1/-1}
+.service--other{display:grid;grid-template-columns:1fr 1.5fr;gap:16px 48px;align-items:start}
+.service--other__head{display:flex;flex-direction:column;gap:16px}
+.service--other__desc{font-size:14px;color:rgba(var(--fg),.65)}
+.service--other ul{grid-template-columns:1fr 1fr;gap:12px 24px;padding-top:4px}
+@media (max-width:980px){.services{grid-template-columns:1fr;max-width:560px;margin-inline:auto}.service--other{grid-template-columns:1fr}}
+@media (max-width:560px){.service--other ul{grid-template-columns:1fr}}
 
 /* Contact */
 .contact{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
@@ -181,8 +187,7 @@ h2{font-size:clamp(30px,5vw,48px);text-align:center}
 .fab::before{content:"";position:absolute;inset:0;border-radius:inherit;border:2px solid var(--solid);animation:pulse 2s infinite}
 @keyframes pulse{from{transform:scale(1);opacity:.6}to{transform:scale(1.3);opacity:0}}
 
-.mock-banner{position:fixed;left:20px;bottom:20px;z-index:60;background:#FFF4D6;color:#7A5300;border:1px solid #F2D68A;font-size:12.5px;font-weight:600;padding:8px 12px;border-radius:10px}
-@media (max-width:560px){.mock-banner{display:none}.fab{display:none}}
+@media (max-width:560px){.fab{display:none}}
 
 @media (prefers-reduced-motion:reduce){
   .reveal{opacity:1;transform:none;transition:none}
@@ -194,7 +199,6 @@ h2{font-size:clamp(30px,5vw,48px);text-align:center}
 </head>
 <body>
 
-<div class="mock-banner">MOCKUP v6: slogan + giá</div>
 
 <!-- Cosmic background (stars + comets generated in JS) -->
 <div class="cosmos" id="cosmos" aria-hidden="true"></div>
@@ -251,7 +255,7 @@ h2{font-size:clamp(30px,5vw,48px);text-align:center}
           <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Xuất dữ liệu Excel</li>
         </ul>
         <div class="service__deliver"><b class="mono">Bàn giao</b><div class="files"><span>Excel (.xlsx)</span></div></div>
-        <div class="price"><small>Chỉ từ</small><b>1.000đ</b><span>/ form</span></div>
+        <div class="price"><small>Chỉ từ</small><b>1.000đ</b><span>/ phiếu</span></div>
         <a href="#lien-he" class="pill pill--glass pill--block">Nhận tư vấn</a>
       </article>
       </div>
@@ -301,6 +305,31 @@ h2{font-size:clamp(30px,5vw,48px);text-align:center}
         <div class="service__deliver"><b class="mono">Bàn giao</b><div class="files"><span>File dữ liệu</span><span>Syntax SPSS (.sps)</span><span>Báo cáo kết quả</span></div></div>
         <div class="price"><small>Chỉ từ</small><b>500.000đ</b></div>
         <a href="#lien-he" class="pill pill--solid pill--block">Nhận tư vấn</a>
+      </article>
+      </div>
+
+      <!-- 04: Dịch vụ khác -->
+      <div class="reveal services__wide" style="--delay:.24s">
+      <article class="service service--other">
+        <div class="service--other__head">
+          <div class="service__top">
+            <div class="service__icon"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg></div>
+            <span class="service__num mono">+</span>
+          </div>
+          <h3>Dịch vụ khác</h3>
+          <p class="service__en">Other Services</p>
+          <p class="service--other__desc">Nhu cầu của bạn chưa có ở trên? Nhắn tư vấn viên để được báo giá riêng.</p>
+          <div class="price"><small>Báo giá</small><b>theo yêu cầu</b></div>
+          <a href="#lien-he" class="pill pill--glass pill--block">Nhận tư vấn</a>
+        </div>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Mock data theo mô hình để chạy thử</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Tìm bộ dữ liệu đã công bố, có trích nguồn</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Rà soát đề tài, mô hình và bảng hỏi</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>AMOS / SmartPLS (CFA, SEM)</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Đồng hành trọn đề tài đến ngày bảo vệ</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Yêu cầu khác về số liệu</li>
+        </ul>
       </article>
       </div>
     </div>

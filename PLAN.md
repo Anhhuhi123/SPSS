@@ -1,6 +1,6 @@
-# Rõ Số: Kế hoạch tổng thể (bản duyệt v3)
+# Alpha Lab: Kế hoạch tổng thể (v5)
 
-> **Trạng thái:** Chờ duyệt. Chưa code, chưa cài môi trường.
+> **Trạng thái:** Website đã xong (HTML thuần, `index.html` ở gốc repo, deploy Vercel). Đang chuẩn bị Phase 1 (quy trình vận hành).
 >
 > **Thay đổi v2 (theo góp ý):**
 > 1. **Tư vấn hoàn toàn qua tin nhắn** (Zalo/Messenger), không gọi điện, không họp 1:1. Bạn là người vận hành và xử lý dữ liệu; Claude Code soạn nội dung chuyên môn (giải thích, trả lời câu hỏi), bạn chỉ đọc lại rồi gửi.
@@ -8,6 +8,8 @@
 > 3. **Tách 2 gói dữ liệu chạy song song:** **Mock Data** (data sát thực tế theo mô hình, để sinh viên có data chạy thử ngay) và **Dữ liệu công bố** (tìm bộ khảo sát đã công bố, có nguồn), cùng một combo gộp cả hai.
 > 4. **(v3) Bỏ cách gọi "học thuật/đạo đức"** trong tài liệu. Mục 4 đổi thành "Phạm vi dịch vụ".
 > 5. **(v4) Website chỉ ghi chung là "Dịch vụ data"** (mock data, dữ liệu công bố, làm sạch, chạy mô hình), không ghi chú thêm gì. **Tư vấn viên (bạn) đánh giá từng trường hợp** sinh viên dùng data vào việc gì, rồi quyết định nhận hay không và chọn gói nào.
+> 6. **(v5) Khớp với website đã làm:** tên chốt **Alpha Lab**; web là 1 file HTML thuần (không Next.js, không form); khách liên hệ thẳng qua Zalo (Facebook/Email bổ sung sau). Web có **3 dịch vụ chính + 1 thẻ "Dịch vụ khác"**; các gói còn lại trong plan cũ chuyển vào "Dịch vụ khác", báo giá theo yêu cầu. Bỏ toàn bộ phần form + Google Sheet.
+>
 > Duyệt xong từng phần (đánh dấu ✅ hoặc ghi góp ý trực tiếp vào file), mình mới triển khai.
 > Ngày lập: 04/11/2026
 
@@ -19,8 +21,8 @@
 4. [Phạm vi dịch vụ](#4-phạm-vi-dịch-vụ)
 5. [Quy trình consulting (cho người tư vấn)](#5-quy-trình-consulting)
 6. [Quy trình thực hiện cho Claude Code](#6-quy-trình-cho-claude-code)
-7. [Website (Next.js, frontend)](#7-website)
-8. [Tiếp nhận đơn qua Google Sheet](#8-tiếp-nhận-đơn-qua-google-sheet)
+7. [Website (HTML, đã xong)](#7-website--đã-xong)
+8. [Tiếp nhận khách](#8-tiếp-nhận-khách)
 9. [Cấu trúc thư mục dự án](#9-cấu-trúc-thư-mục-dự-án)
 10. [Lộ trình triển khai](#10-lộ-trình-triển-khai)
 11. [Câu hỏi cần bạn chốt](#11-câu-hỏi-cần-bạn-chốt)
@@ -114,26 +116,21 @@
 2. **Hiểu được bài mình:** report giải thích từng bảng, có dàn ý trình bày và câu hỏi giảng viên hay hỏi, nên sinh viên không bị "đứng hình" khi thuyết trình.
 3. **Minh bạch:** giao kèm syntax (.sps) và log xử lý, nên chạy lại ra đúng kết quả.
 
-### 2.2 Gợi ý tên thương hiệu
+### 2.2 Tên thương hiệu: **Alpha Lab** ✅
 
-| Tên | Ý nghĩa | Ưu | Nhược |
-|---|---|---|---|
-| **Rõ Số** ⭐ | "Hiểu rõ từng con số" | Ngắn, tiếng Việt, dễ nhớ, đúng định vị "giải thích" | Dấu tiếng Việt, domain sẽ là `roso.vn` / `roso.edu.vn` |
-| **Biến Số Lab** | "Biến số" là thuật ngữ quen thuộc với dân nghiên cứu | Có chất học thuật | Hơi dài |
-| **Sig. Lab** | Sig. là chỉ số ai chạy SPSS cũng biết | Rất "đúng dân" | Người ngoài ngành không hiểu |
-| **Mentora Research** | Mentor + Research | Nghe quốc tế | Chung chung, khó nổi bật |
-| **Luận Data** | Luận văn + Data | Rõ ngay là làm gì | Dễ bị gắn với "làm hộ luận văn" |
+Tên lấy từ Cronbach's Alpha, chỉ số đầu tiên sinh viên nào chạy SPSS cũng gặp. Logo là đường cong phân phối chuẩn với vùng đuôi có ý nghĩa.
 
-**Đề xuất: Rõ Số**, slogan: *"Hiểu rõ từng con số trong nghiên cứu của bạn."*
-(Cần kiểm tra trùng tên trên Facebook, Zalo OA và domain trước khi chốt.)
+- Bộ nhận diện: `brand/alpha-lab/` (logo nền sáng/tối, `mark.svg`, avatar 1024×1024, ảnh bìa Facebook 1640×624).
+- Slogan trên web: *"Make every number make sense."*
+- Các phương án đã loại: Rõ Số, Biến Số, Mẫu Số, Sig.
 
-### 2.3 Kênh liên hệ (bạn gửi link sau)
+### 2.3 Kênh liên hệ
 
-- [ ] Zalo (cá nhân hoặc Zalo OA)
-- [ ] Facebook Page
-- [ ] Email
+- [x] Zalo: `https://zalo.me/0905889328` (kênh chính, có nút nổi trên web)
+- [ ] Facebook Page: **pending**
+- [ ] Email: **pending**
 
-Trên website, các link này nằm trong một file cấu hình (`site.config.ts`) nên đổi rất dễ.
+Link Facebook/Email nằm trong `index.html`, đánh dấu `TODO(pending)` (thẻ liên hệ + footer).
 
 ---
 
@@ -143,24 +140,38 @@ Trên website, các link này nằm trong một file cấu hình (`site.config.t
 
 - **Neo theo giá thị trường** (mục 1.3), định giá ngang hoặc thấp hơn khoảng 10%, vì mình là thương hiệu mới chưa có review.
 - **Không bán phá giá.** Giá trị khác biệt nằm ở bàn giao (syntax, log, buổi 1:1), nên không cần rẻ nhất.
-- **Nâng cấp được:** phí gói trước được trừ vào gói sau. Ví dụ đã mua Starter 300k, lên SPSS thì trừ 300k.
-- Website ghi giá dạng **"từ X"**. Báo giá cuối cùng gửi sau buổi chẩn đoán.
+- **Nâng cấp được:** phí gói trước được trừ vào gói sau. Ví dụ đã mua Rà soát 300k, lên SPSS thì trừ 300k.
+- Website ghi giá dạng **"từ X"**, "Dịch vụ khác" ghi "báo giá theo yêu cầu". Báo giá cuối cùng gửi sau khi chẩn đoán qua tin nhắn.
 
-### 3.2 Bảng giá đề xuất
+### 3.2 Bảng giá (khớp với website)
 
-| Gói | Nội dung | Bàn giao | Thời gian | Giá khởi điểm |
+**3 dịch vụ chính** (hiện trên web, đi theo luồng 01 → 02 → 03, khách mua riêng từng bước được):
+
+| # | Dịch vụ | Nội dung (như trên web) | Bàn giao | Giá trên web |
 |---|---|---|---|---|
-| **Research Starter** | Rà soát đề tài, mô hình, giả thuyết, thang đo, bảng hỏi; đề xuất cỡ mẫu và phương pháp; góp ý qua tin nhắn | Research Assessment + Analysis Plan | 1–2 ngày | **từ 300.000đ** |
-| **Mock Data** (mới) | Sinh bộ mock data **sát thực tế** theo đúng mô hình của sinh viên (số biến, số item, thang Likert, cỡ mẫu, phân phối và tương quan hợp lý, nhân khẩu học), để sinh viên **có data chạy thử mô hình** ngay, không phải chờ khảo sát. Có thể dựa trên cấu trúc của nghiên cứu tương tự | `mock_data.sav` + `.xlsx` + codebook | Trong ngày | **từ 150.000đ** |
-| **Dữ liệu công bố** (mới) | Tìm bộ dữ liệu khảo sát đã công bố cùng chủ đề (Kaggle, Mendeley Data, OSF, Harvard Dataverse, GSO, World Bank…), chuẩn hóa lại cho SPSS, kèm trích dẫn nguồn | Dataset + trích dẫn | 1–3 ngày | **từ 250.000đ** |
-| **Combo Mock + Công bố** | Chạy song song: có mock data để dựng và thử mô hình ngay; khi tìm được dữ liệu công bố phù hợp thì chạy lại trên bộ đó | Cả hai bộ + pipeline chạy sẵn | 1–3 ngày | **từ 350.000đ** |
-| **Data Collection Support** | Dựng Google Form chuẩn (câu lọc, câu kiểm tra chú ý), kế hoạch tiếp cận đối tượng, theo dõi tiến độ và chất lượng phiếu | Form + Kế hoạch thu mẫu + Collection Summary | Theo tiến độ thu | **từ 400.000đ** |
-| **Data Cleaning** | Missing, trùng, phiếu không hợp lệ, straight-lining, câu đảo chiều, mã hóa, gán nhãn, xuất .sav | Clean dataset + Data Dictionary + Cleaning Log | 1–2 ngày | **từ 400.000đ** |
-| **SPSS Consulting: Cơ bản** | Cronbach + EFA *hoặc* Pearson + hồi quy | .sav + .sps + output + Report | 1–2 ngày | **từ 700.000đ** |
-| **SPSS Consulting: Trọn bộ** | Mô tả + Cronbach + EFA + Pearson + hồi quy + T-test/ANOVA + kiểm tra giả định + giải đáp qua tin nhắn | .sav + .sps + output + Analysis Report | 2–4 ngày | **từ 1.800.000đ** |
-| **Gói Bài tập môn** (mới) | Cho tiểu luận / bài tập môn: một mô hình nhỏ (≤ 5 biến), chạy mô tả + Cronbach + EFA + hồi quy, kèm giải thích ngắn gọn | .sav + .sps + bảng kết quả + giải thích | 1–2 ngày | **từ 500.000đ** |
-| **AMOS / SmartPLS (SEM)** | CFA (CR, AVE, HTMT), SEM/PLS-SEM, trung gian/điều tiết, bootstrap | Project file + Report + hướng dẫn | 4–7 ngày | **từ 1.800.000đ** (CFA) · **từ 2.800.000đ** (CFA + SEM) |
-| **Full Research Mentoring** | Đồng hành cả 6 bước, dàn ý trình bày chương 3–4, bộ câu hỏi bảo vệ soạn sẵn, nhóm chat Zalo hỗ trợ đến ngày bảo vệ | Toàn bộ deliverables | Theo tiến độ đề tài | **từ 3.500.000đ** |
+| 01 | **Tạo dữ liệu khảo sát** (Data Collection Support) | Dựng Google Form; triển khai khảo sát, thu phản hồi thực tế; theo dõi số phản hồi theo yêu cầu; xuất Excel | Excel (.xlsx) | **từ 1.000đ / phiếu** (tính trên mỗi phiếu trả lời thu được) |
+| 02 | **Xử lý dữ liệu** (Data Processing) | Kiểm tra, làm sạch, mã hóa biến; xử lý thiếu và bất thường theo tiêu chí thống nhất; chuẩn hóa để đưa vào SPSS | Excel + SPSS (.sav) + Cleaning log | **từ 300.000đ** |
+| 03 | **Hỗ trợ phân tích SPSS** (Statistical Analysis) ⭐ Phổ biến nhất | Thống kê mô tả, Cronbach's Alpha, EFA, Pearson, hồi quy tuyến tính, T-test/ANOVA, kiểm tra giả định, giải thích kết quả và hướng dẫn đọc output | File dữ liệu + Syntax (.sps) + Báo cáo kết quả | **từ 500.000đ** |
+
+**Mốc báo giá nội bộ cho dịch vụ 03** (không ghi trên web, dùng khi báo giá qua tin nhắn):
+
+| Phạm vi | Giá tham khảo |
+|---|---|
+| Bài tập môn: mô hình nhỏ (≤ 5 biến), mô tả + Cronbach + EFA + hồi quy, giải thích ngắn | 500.000đ |
+| Cơ bản: Cronbach + EFA *hoặc* Pearson + hồi quy | 700.000đ |
+| Trọn bộ: tất cả kiểm định ở trên + giải đáp qua tin nhắn | 1.800.000đ |
+
+**Dịch vụ khác** (thẻ thứ 4 trên web, ghi "Báo giá theo yêu cầu"). Giá dưới đây là mốc nội bộ:
+
+| Dịch vụ | Nội dung | Bàn giao | Giá tham khảo |
+|---|---|---|---|
+| **Mock data** | Sinh data sát thực tế theo đúng mô hình (số biến, item, thang Likert, cỡ mẫu, tương quan hợp lý) để chạy thử mô hình ngay | `mock_data.sav` + `.xlsx` + codebook | 150.000đ |
+| **Dữ liệu đã công bố** | Tìm bộ khảo sát đã công bố cùng chủ đề (Kaggle, Mendeley Data, OSF, Harvard Dataverse, GSO, World Bank…), chuẩn hóa cho SPSS, kèm trích dẫn | Dataset + trích dẫn | 250.000đ |
+| Combo Mock + Công bố | Dựng mô hình trên mock trước, có bộ công bố thì chạy lại | Cả hai bộ + pipeline | 350.000đ |
+| **Rà soát đề tài, mô hình, bảng hỏi** | Góp ý mô hình, giả thuyết, thang đo, bảng hỏi; đề xuất cỡ mẫu và phương pháp | Research Assessment + Analysis Plan | 300.000đ |
+| **AMOS / SmartPLS** | CFA (CR, AVE, HTMT), SEM/PLS-SEM, trung gian/điều tiết, bootstrap | Project file + Report + hướng dẫn | 1.800.000đ (CFA) · 2.800.000đ (CFA + SEM) |
+| **Đồng hành trọn đề tài** | Cả 6 bước, dàn ý chương 3–4, câu hỏi bảo vệ soạn sẵn, hỗ trợ Zalo đến ngày bảo vệ | Toàn bộ deliverables | 3.500.000đ |
+| Yêu cầu khác về số liệu | Đánh giá từng trường hợp | n/a | Báo giá riêng |
 
 ### 3.3 Điều khoản chung
 
@@ -203,7 +214,7 @@ Trên website, các link này nằm trong một file cấu hình (`site.config.t
 |---|---|
 | Sinh viên xin "viết luôn chương 4" | Giao **Analysis Report** giải thích từng bảng kèm **dàn ý** chương 4 và mẫu câu trình bày. Sinh viên tự viết. Mình review và góp ý bản của họ |
 | Alpha thấp, sinh viên muốn "chỉnh" | Chẩn đoán nguyên nhân thật (câu đảo chiều, phiếu kém, thang đo dịch sai). Chỉ loại biến hoặc loại phiếu theo **tiêu chí đã định trước** và **ghi vào Cleaning Log** |
-| Thiếu mẫu, chưa có data để chạy | Gói **Mock Data** (chạy thử ngay) và/hoặc **Dữ liệu công bố**, hoặc combo cả hai. Không trộn phiếu mock vào data khảo sát thật của sinh viên |
+| Thiếu mẫu, chưa có data để chạy | **Mock data** (chạy thử ngay) và/hoặc **Dữ liệu đã công bố** (nhóm "Dịch vụ khác"), hoặc combo cả hai. Không trộn phiếu mock vào data khảo sát thật của sinh viên |
 | Mock data trong báo cáo | Báo cáo dùng từ trung tính **"dữ liệu"**, không cần ghi chú "mô phỏng" trong thân bài. Claude Code chỉ **không tự viết thêm** các chi tiết về một cuộc khảo sát không có thật (ví dụ "khảo sát 250 sinh viên tại UEH từ 01–15/11"); phần phương pháp thu thập do sinh viên tự viết |
 | Giả thuyết bị bác bỏ | Trình bày trung thực, hướng dẫn cách *giải thích* kết quả không ủng hộ giả thuyết (đây là kết quả hợp lệ) |
 | Đặt tên file mock data | Nội bộ, trong thư mục case: `data/mock/` (để không lẫn với data thật khi chạy combo). File giao khách: `mock_data.sav`, tên trung tính, không watermark |
@@ -211,8 +222,8 @@ Trên website, các link này nằm trong một file cấu hình (`site.config.t
 
 ### 4.4 Cơ chế bảo vệ
 
-1. Một dòng nhỏ dưới nút gửi form: *"Rõ Số hỗ trợ xử lý & giải thích dữ liệu; nguồn dữ liệu luôn được ghi rõ."* Không có checkbox răn đe.
-2. Báo giá gửi qua Zalo có 1 dòng phạm vi dịch vụ.
+1. Báo giá gửi qua Zalo có 1 dòng phạm vi dịch vụ: *"Alpha Lab hỗ trợ xử lý & giải thích dữ liệu; nguồn dữ liệu luôn được ghi rõ."*
+2. Website không có checkbox hay lời răn đe; tư vấn viên đánh giá từng trường hợp khi nhắn tin.
 3. **Cleaning Log bắt buộc:** mọi phiếu hoặc biến bị loại đều có lý do và tiêu chí, nên sinh viên có thể đưa vào phụ lục.
 4. **Claude Code bị ràng buộc bởi `CLAUDE.md`:** gặp yêu cầu thuộc 4.2 thì dừng và báo lại, không thực hiện.
 5. Mỗi case lưu **Integrity Check** trong file bàn giao (checklist ở mục 6.6).
@@ -238,21 +249,21 @@ Trên website, các link này nằm trong một file cấu hình (`site.config.t
 ### 5.1 Vòng đời một đơn (case)
 
 ```
- Lead ─► Chẩn đoán ─► Báo giá ─► Cọc ─► Thực hiện (6 bước) ─► QA ─► Bàn giao ─► Hậu mãi ─► Đóng case
+ Khách nhắn ─► Chẩn đoán ─► Báo giá ─► Cọc ─► Thực hiện (6 bước) ─► QA ─► Bàn giao ─► Hậu mãi ─► Đóng case
   │                                         ▲
-  └ form web → Google Sheet (status: NEW)    └ Claude Code làm phần kỹ thuật
+  └ Zalo / Facebook / Email (status: NEW)    └ Claude Code làm phần kỹ thuật
 ```
 
-| Status trong Sheet | Ý nghĩa | Ai làm | SLA |
+| Status (lưu trong `case.yaml`) | Ý nghĩa | Ai làm | SLA |
 |---|---|---|---|
-| `NEW` | Form vừa gửi | (tự động) | n/a |
-| `CONTACTED` | Đã nhắn Zalo | Tư vấn viên | ≤ 24 giờ |
+| `NEW` | Khách vừa nhắn lần đầu | Tư vấn viên | n/a |
+| `CONTACTED` | Đã trả lời, đang xin tài liệu | Tư vấn viên | ≤ 24 giờ |
 | `DIAGNOSED` | Đã chẩn đoán xong | Tư vấn viên + Claude Code | ≤ 48 giờ |
 | `QUOTED` | Đã gửi báo giá và thỏa thuận | Tư vấn viên | Cùng ngày chẩn đoán |
 | `DEPOSITED` | Đã nhận cọc 50%, tạo thư mục case | Tư vấn viên | n/a |
 | `IN_PROGRESS` | Đang thực hiện các bước | Claude Code + tư vấn viên | Theo gói |
 | `QA` | Kiểm tra chất lượng | Tư vấn viên | ≤ 1 ngày |
-| `DELIVERED` | Đã bàn giao và có buổi giải thích | Tư vấn viên | n/a |
+| `DELIVERED` | Đã bàn giao và gửi tin nhắn giải thích | Tư vấn viên | n/a |
 | `REVISION` | Sửa theo góp ý của giảng viên | Claude Code + tư vấn viên | ≤ 2 ngày/lần |
 | `CLOSED` | Thanh toán đủ, xin feedback | Tư vấn viên | n/a |
 | `LOST` / `REJECTED` | Không chốt / từ chối do vi phạm mục 4 | Tư vấn viên | n/a |
@@ -261,27 +272,27 @@ Trên website, các link này nằm trong một file cấu hình (`site.config.t
 
 #### Giai đoạn A: Tiếp nhận và chẩn đoán (miễn phí)
 
-1. Nhận thông báo đơn mới (email từ Apps Script). Nhắn Zalo trong 24 giờ theo **script mở đầu** (mục 5.4).
+1. Khách nhắn qua Zalo (hoặc Facebook/Email). Trả lời trong 24 giờ theo **script mở đầu** (mục 5.4), rồi chạy `/new-case` với thông tin khách để tạo case ở status `NEW`.
 2. Xin tài liệu: đề cương, mô hình, bảng hỏi, data (nếu có), yêu cầu của giảng viên. **Hỏi mục đích dùng data** (bài tập luyện / tiểu luận / NCKH / khóa luận) để đánh giá và chọn gói.
 3. Chạy **Claude Code `/diagnose <case_id>`**. Claude Code ra 2 thứ: *Research Assessment* (nội bộ) và **tin nhắn tóm tắt cho khách** (ngắn gọn, kèm báo giá đề xuất).
 4. Bạn đọc lại rồi gửi tin nhắn đó cho khách.
 5. **Phân loại khách theo giai đoạn** để chọn gói:
 
-| Khách đang… | Gói chính | Upsell tự nhiên |
+| Khách đang… | Dịch vụ chính | Gợi ý thêm |
 |---|---|---|
-| Làm bài tập môn, chưa có data / không đủ người khảo sát | **Mock Data (hoặc Combo) + Gói Bài tập môn** | SPSS Trọn bộ |
-| Chưa có mô hình / bảng hỏi | Research Starter | Data Collection, Full Mentoring |
-| Có bảng hỏi, chưa thu | Research Starter (rà bảng hỏi) + Data Collection | Cleaning + SPSS |
-| Có data thô | Data Cleaning | SPSS |
-| Chạy rồi nhưng lỗi | SPSS Consulting | AMOS, buổi luyện bảo vệ |
-| Cần mô hình SEM | AMOS / SmartPLS | Full Mentoring |
-| Có kết quả, cần hiểu | SPSS Cơ bản (review + giải thích) | Luyện bảo vệ |
+| Làm bài tập môn, chưa có data / không đủ người khảo sát | **Mock data** (hoặc combo với Dữ liệu đã công bố) + **03 Phân tích SPSS** (mốc bài tập môn) | 03 trọn bộ |
+| Chưa có mô hình / bảng hỏi | Rà soát đề tài, mô hình, bảng hỏi | 01 Tạo dữ liệu khảo sát, Đồng hành trọn đề tài |
+| Có bảng hỏi, chưa thu | **01 Tạo dữ liệu khảo sát** (+ Rà soát bảng hỏi nếu cần) | 02 + 03 |
+| Có data thô | **02 Xử lý dữ liệu** | 03 |
+| Chạy rồi nhưng lỗi | **03 Phân tích SPSS** | AMOS / SmartPLS |
+| Cần mô hình SEM | AMOS / SmartPLS | Đồng hành trọn đề tài |
+| Có kết quả, cần hiểu | **03 Phân tích SPSS** (mốc cơ bản: review + giải thích) | Câu hỏi bảo vệ |
 
 #### Giai đoạn B: Báo giá và chốt
 
 1. Gửi **báo giá 1 trang**: phạm vi, deliverables, thời gian, giá, điều khoản, cam kết học thuật.
-2. Khách xác nhận và chuyển cọc 50%. Cập nhật Sheet sang `DEPOSITED`.
-3. Chạy **`/new-case <case_id>`** để tạo thư mục case từ template.
+2. Khách xác nhận và chuyển cọc 50%. Cập nhật status sang `DEPOSITED`.
+3. Điền gói đã chốt vào `case.yaml` và chép tài liệu khách vào `00_intake/`.
 
 #### Giai đoạn C: Thực hiện, theo 6 bước chuẩn
 
@@ -289,10 +300,10 @@ Trên website, các link này nằm trong một file cấu hình (`site.config.t
 |---|---|---|---|---|---|
 | 1 | Research Diagnosis | Đề tài, mô hình, bảng hỏi, yêu cầu GV | Xác định vấn đề, rủi ro, phạm vi | `01_research_assessment.md` | Claude Code nháp, tư vấn viên duyệt |
 | 2 | Research Design | Kết quả bước 1 | Kiểm tra biến, thang đo, cỡ mẫu, chọn phương pháp | `02_research_plan.md`, `02_analysis_plan.md` | Claude Code nháp, tư vấn viên duyệt |
-| 3 | Data Collection | Bảng hỏi đã chốt | Dựng form, kế hoạch tiếp cận, theo dõi tiến độ | Link form, `03_collection_summary.md` | Tư vấn viên (Claude Code soạn form/nội dung) |
+| 3 | Data Collection | Bảng hỏi đã chốt | Dựng form, kế hoạch tiếp cận, theo dõi tiến độ | Link form, `03_collection_summary.md` | Tư vấn viên (Claude Code soạn form/nội dung). Chỉ thu phiếu từ người trả lời thật |
 | 4 | Data Preparation | Data thô (.xlsx/.csv/Sheet) | Kiểm tra, làm sạch, mã hóa, outlier, đảo chiều | `clean.sav`, `data_dictionary.xlsx`, `04_cleaning_log.md` | Claude Code |
 | 5 | Statistical Analysis | Data sạch + analysis plan | Chạy các kiểm định theo plan, kiểm tra giả định | `.sps`, output, bảng kết quả, project AMOS/PLS | Claude Code (+ tư vấn viên chạy AMOS/SmartPLS GUI nếu cần) |
-| 6 | Interpretation & Handover | Kết quả bước 5 | Giải thích, đối chiếu giả thuyết, dàn ý chương 4, câu hỏi bảo vệ, hướng dẫn tự chạy lại | `06_analysis_report.docx/.md`, `06_tutorial.md`, `06_defense_qa.md` | Claude Code nháp, tư vấn viên duyệt và dạy 1:1 |
+| 6 | Interpretation & Handover | Kết quả bước 5 | Giải thích, đối chiếu giả thuyết, dàn ý chương 4, câu hỏi bảo vệ, hướng dẫn tự chạy lại | `06_analysis_report.docx/.md`, `06_tutorial.md`, `06_defense_qa.md` | Claude Code nháp, tư vấn viên duyệt và gửi qua tin nhắn |
 
 **Checkpoint với khách**, bắt buộc xác nhận trước khi đi tiếp:
 
@@ -305,13 +316,13 @@ Trên website, các link này nằm trong một file cấu hình (`site.config.t
 1. Tư vấn viên chạy **QA checklist** (mục 6.6).
 2. Gửi gói bàn giao: một thư mục zip hoặc Drive, có `README` liệt kê từng file.
 3. Gửi kèm **tin nhắn hướng dẫn đọc kết quả** (Claude Code soạn: 5–7 ý chính, kết luận giả thuyết) và mời khách hỏi lại bất cứ chỗ nào chưa hiểu.
-4. Thu 50% còn lại. Cập nhật Sheet sang `DELIVERED`.
+4. Thu 50% còn lại. Cập nhật status sang `DELIVERED`.
 
 #### Giai đoạn E: Hậu mãi
 
 - Hỗ trợ sửa 2 lần trong 30 ngày (`REVISION`).
 - Sau khi khách bảo vệ xong: xin feedback (form 3 câu) và xin phép dùng testimonial ẩn danh.
-- Sau 90 ngày: **xóa dữ liệu** của khách, ghi ngày xóa vào Sheet.
+- Sau 90 ngày: **xóa dữ liệu** của khách, ghi ngày xóa vào `case.yaml`.
 
 ### 5.3 Template tài liệu cho khách
 
@@ -323,20 +334,20 @@ Trên website, các link này nằm trong một file cấu hình (`site.config.t
 | Cleaning Log + Data Dictionary | Bước 4 |
 | Analysis Report (giải thích từng bảng) | Bước 6 |
 | Tutorial "tự chạy lại" | Bước 6 |
-| Bộ câu hỏi bảo vệ (Defense Q&A) | Bước 6, gói SPSS Trọn bộ trở lên |
+| Bộ câu hỏi bảo vệ (Defense Q&A) | Bước 6, dịch vụ 03 mốc trọn bộ trở lên |
 | README bàn giao | Bàn giao |
 | Form feedback | Đóng case |
 
 ### 5.4 Script giao tiếp mẫu
 
-- **Mở đầu:** "Chào [tên], mình là [X] bên Rõ Số. Mình đã nhận yêu cầu về đề tài *[đề tài]*. Bạn gửi giúp mình bảng hỏi, mô hình và file data (nếu có) để mình chẩn đoán miễn phí nhé. Khoảng [thời gian] mình gửi lại đánh giá và báo giá."
+- **Mở đầu:** "Chào [tên], mình là [X] bên Alpha Lab. Cảm ơn bạn đã nhắn về đề tài *[đề tài]*. Bạn gửi giúp mình bảng hỏi, mô hình và file data (nếu có) để mình chẩn đoán miễn phí nhé. Khoảng [thời gian] mình gửi lại đánh giá và báo giá."
 - **Từ chối yêu cầu vi phạm:** "Phần này bên mình không làm được vì sẽ khiến bạn gặp rủi ro gian lận học thuật (có thể bị đình chỉ). Thay vào đó, mình có thể [phương án hợp lệ]…"
 
 ---
 
 ## 6. Quy trình cho Claude Code
 
-> Mục tiêu: bạn chỉ cần nói *"làm đơn RC-001 gói SPSS trọn bộ"*. Claude Code đọc đơn, tự chọn bước, làm theo SOP, dừng ở checkpoint, và **linh hoạt** với yêu cầu riêng của từng đề tài.
+> Mục tiêu: bạn chỉ cần nói *"làm đơn AL-2611-001 phân tích SPSS trọn bộ"*. Claude Code đọc đơn, tự chọn bước, làm theo SOP, dừng ở checkpoint, và **linh hoạt** với yêu cầu riêng của từng đề tài.
 
 ### 6.1 Thành phần
 
@@ -352,7 +363,7 @@ Trên website, các link này nằm trong một file cấu hình (`site.config.t
 ### 6.2 Cấu trúc một case
 
 ```
-cases/RC-2611-001/
+cases/AL-2611-001/
 ├── case.yaml                 # thông tin đơn + mô hình nghiên cứu + gói + status (nguồn sự thật)
 ├── 00_intake/                # tài liệu khách gửi (bảng hỏi, đề cương, yêu cầu GV)
 ├── 01_assessment.md
@@ -379,10 +390,11 @@ cases/RC-2611-001/
 **`case.yaml` mẫu:**
 
 ```yaml
-case_id: RC-2611-001
+case_id: AL-2611-001
 status: IN_PROGRESS
-client: { name: "Nguyễn Văn A", school: "UEH", level: "Đại học", deadline: 2026-12-15 }
-packages: [data_cleaning, spss_full]
+client: { name: "Nguyễn Văn A", contact: "zalo", school: "UEH", level: "Đại học", deadline: 2026-12-15 }
+packages: [xu_ly_du_lieu, phan_tich_spss]   # + spss_tier: bai_tap | co_ban | tron_bo
+spss_tier: tron_bo
 topic: "Các yếu tố ảnh hưởng đến ý định mua hàng online của Gen Z"
 model:
   type: regression            # regression | sem | pls_sem | group_comparison
@@ -406,7 +418,7 @@ flexible_notes: "GV yêu cầu bảng theo mẫu APA, làm tròn 3 chữ số"
 
 | Lệnh | Bước | Việc Claude Code làm | Dừng để duyệt? |
 |---|---|---|---|
-| `/new-case <id>` | n/a | Lấy đơn từ Google Sheet (hoặc paste), tạo thư mục từ template, điền `case.yaml` | Không |
+| `/new-case` | n/a | Bạn paste thông tin khách (tin nhắn Zalo/Facebook/Email), Claude Code cấp mã `AL-YYMM-NNN`, tạo thư mục từ template, điền `case.yaml` | Không |
 | `/diagnose <id>` | 1 | Đọc tài liệu khách, phát hiện vấn đề (mô hình, thang đo, cỡ mẫu, bảng hỏi), viết Assessment, gợi ý gói và giá | **Có** |
 | `/design <id>` | 2 | Chọn kiểm định theo cây quyết định, tính cỡ mẫu, viết Research Plan + Analysis Plan | **Có** (checkpoint khách) |
 | `/build-form <id>` | 3 | Soạn nội dung Google Form (câu lọc, attention check, thứ tự), checklist phát khảo sát | Có |
@@ -503,116 +515,70 @@ mục tiêu (so sánh nhóm / quan hệ / dự báo / đo lường) → loại b
 
 ---
 
-## 7. Website
+## 7. Website ✅ Đã xong
 
-### 7.1 Stack đề xuất
+### 7.1 Stack
 
-> Bạn nói "Nest". Mình hiểu là **Next.js**: NestJS là framework backend, không dùng để làm giao diện. Nếu đúng là Next.js thì stack như sau:
+- **1 file `index.html`** ở gốc repo: HTML + CSS + JS thuần, không build step. Chỉ load Google Fonts (Be Vietnam Pro, JetBrains Mono).
+- Ảnh và logo: `brand/alpha-lab/`.
+- Deploy: **Vercel** (Framework Preset: Other, Root Directory `./`), tự deploy khi push lên `main`. File `.vercelignore` chặn `PLAN.md`, `README.md`, `docs/` để tài liệu nội bộ không lên web.
+- Có chế độ sáng/tối (mặc định tối, nhớ lựa chọn của người xem).
 
-| Lớp | Lựa chọn | Lý do |
+### 7.2 Cấu trúc trang
+
+| # | Section | Nội dung |
 |---|---|---|
-| Framework | **Next.js 15 (App Router) + TypeScript**, `output: 'export'` (static) | Chỉ có frontend, deploy free lên Vercel |
-| Styling | **Tailwind CSS** | Nhanh, đồng bộ |
-| UI components | **shadcn/ui** (Accordion, Dialog, Form, Select, Toast) | Đẹp, tùy biến được |
-| Animation | **Framer Motion** (reveal on scroll, stagger, layout animation) + **Lenis** (smooth scroll) | Mượt, "xịn" |
-| Hiệu ứng nổi bật | Count-up số liệu, timeline vẽ dần theo scroll, card nghiêng nhẹ khi hover, marquee logo trường, mockup bảng SPSS "đang chạy" ở hero | Tạo cảm giác chuyên nghiệp, đúng chủ đề |
-| Icon | `lucide-react` | n/a |
-| Font | **Be Vietnam Pro** (hiển thị tiếng Việt chuẩn) | n/a |
-| Form | `react-hook-form` + `zod` để validate, POST lên Google Apps Script | Không cần backend |
-| Deploy | Vercel (free) + domain riêng | n/a |
-| Analytics | Vercel Analytics hoặc Google Analytics 4 + Meta Pixel (nếu chạy ads) | Đo nguồn khách |
+| 0 | Navbar | Logo Alpha Lab, link Dịch vụ / Liên hệ, nút đổi theme |
+| 1 | Hero (`#top`) | "Make every number make sense." + CTA |
+| 2 | Dịch vụ (`#dich-vu`) | 3 thẻ 01 → 02 → 03 (thẻ 03 "Phổ biến nhất") + thẻ ngang **"Dịch vụ khác"** (báo giá theo yêu cầu) |
+| 3 | Liên hệ (`#lien-he`) | Zalo (chính), Facebook, Email |
+| 4 | Footer | Logo, link liên hệ |
+| n/a | Nút nổi | "Chat Zalo" góc dưới phải |
 
-### 7.2 Cấu trúc trang: one-page, cuộn dọc
+### 7.3 Việc còn lại
 
-| # | Section | Nội dung | Animation |
-|---|---|---|---|
-| 0 | **Navbar** (sticky, mờ nền khi cuộn) | Logo, menu anchor, nút "Gửi yêu cầu" | Thu nhỏ khi cuộn, active theo section |
-| 1 | **Hero** | Headline "Hiểu rõ từng con số trong nghiên cứu của bạn", subtext, 2 CTA, 3 điểm tin cậy; bên phải là mockup bảng Cronbach có chỉ số "chạy" | Chữ hiện từng dòng; số đếm lên; chip KMO/R² trôi nhẹ |
-| 2 | **Dải số liệu** | 6 gói · 6 bước · 3 phần mềm · 100% có syntax | Count-up khi vào khung nhìn |
-| 3 | **7 vấn đề** | Grid 7 thẻ (số thứ tự, tiêu đề, mô tả) | Stagger fade-up; hover nâng thẻ |
-| 4 | **Dịch vụ** | Các thẻ gói: đối tượng, nội dung, bàn giao, giá "từ X"; gói SPSS nổi bật. Nhóm dữ liệu gộp thành một thẻ **"Dịch vụ Data"** (mock data · dữ liệu công bố · làm sạch), không ghi chú thêm | Thẻ nổi bật có viền gradient chuyển động |
-| 5 | **Quy trình 6 bước** | Timeline dọc: tên bước, mô tả, deliverable | Đường timeline vẽ dần theo scroll |
-| 6 | **So sánh** (mới) | Bảng "Dịch vụ thông thường vs Rõ Số": syntax, log, buổi 1:1, cam kết data thật | Check/cross hiện lần lượt |
-| 7 | **Cách làm việc** (nền tối) | 4 bước: Nhắn Zalo / gửi file → Nhận báo giá trong 24h → Nhận kết quả + giải thích → Hỏi lại thoải mái 30 ngày. *(v2: thay cho section "Cam kết học thuật")* | Các bước hiện lần lượt |
-| 8 | **Feedback** | Testimonial (để trống lúc ra mắt, ẩn section nếu chưa có) | Carousel |
-| 9 | **FAQ** | 6–8 câu (data, chỉnh số, bàn giao, thời gian, thanh toán, bảo mật) | Accordion mượt |
-| 10 | **Form gửi yêu cầu** | Xem 7.3 | Chia thành 3 bước (stepper) với thanh tiến độ |
-| 11 | **Footer** | Logo, slogan, Zalo / Facebook / Email, link cam kết | n/a |
-| n/a | **Nút nổi** | Nút Zalo nổi góc phải, và "Gửi yêu cầu" trên mobile | Pulse nhẹ |
-
-**Trang phụ (tùy chọn, có thể làm sau):** `/cam-ket` (chính sách học thuật đầy đủ), `/bao-mat`.
-
-### 7.3 Form gửi yêu cầu, gồm 3 bước
-
-| Bước | Trường | Bắt buộc |
-|---|---|---|
-| **1. Liên hệ** | Họ tên · SĐT/Zalo · Email · Trường · Ngành · Bậc học (ĐH/ThS/TS) | Tên, SĐT, Trường, Bậc |
-| **2. Nghiên cứu** | Loại bài (tiểu luận/NCKH/KLTN/luận văn/bài báo) · Deadline · Tên đề tài · Mô hình (text) · **Giai đoạn hiện tại** (6 lựa chọn) · Số mẫu hiện có / yêu cầu · Phần mềm (SPSS/AMOS/SmartPLS/Stata/Chưa rõ) | Loại bài, Deadline, Đề tài, Giai đoạn |
-| **3. Nhu cầu** | Gói quan tâm (chọn nhiều) · **Tình trạng dữ liệu** (đã có đủ / có nhưng thiếu / cần mock data để chạy thử / cần tìm dữ liệu công bố) · Link Google Drive tài liệu · Mô tả vấn đề · Biết đến qua đâu | Gói, Tình trạng dữ liệu |
-
-- Tạo **mã đơn** phía client theo dạng `RC-YYMM-XXXX` và hiển thị sau khi gửi thành công ("Mã đơn của bạn: RC-2611-0042").
-- Chống spam: honeypot + giới hạn 1 lần gửi mỗi 60 giây.
-- Upload file: **không** upload trực tiếp. Dùng link Google Drive, cho đơn giản và an toàn.
-
-### 7.4 Thiết kế
-
-- **Màu:** navy đậm `#0B1F3A` (tin cậy, học thuật), teal `#0FB5A6` (dữ liệu, tươi), cam nhấn `#FF7A45` (CTA); nền trắng ngà; section cam kết dùng nền navy.
-- **Phong cách:** sạch, nhiều khoảng trắng, bo góc 16px, đổ bóng mềm, có các chi tiết "data" (lưới chấm, bảng số, biểu đồ cột nhỏ làm logo).
-- **Responsive:** ưu tiên mobile, vì sinh viên chủ yếu vào từ Facebook và Zalo trên điện thoại.
-- **Hiệu năng:** Lighthouse ≥ 90; animation tôn trọng `prefers-reduced-motion`.
-- **SEO:** metadata tiếng Việt, Open Graph image (để share lên Facebook/Zalo có ảnh đẹp), `sitemap.xml`.
+- [ ] Link Facebook và Email (đang `href="#"`, có ghi chú `TODO(pending)`).
+- [ ] Sau khi có domain: thêm `meta description`, ảnh Open Graph (dùng `cover-facebook.png`) để share lên Facebook/Zalo có ảnh xem trước.
+- [ ] (Tùy chọn) Google Analytics 4 / Meta Pixel nếu chạy quảng cáo.
 
 ---
 
-## 8. Tiếp nhận đơn qua Google Sheet
+## 8. Tiếp nhận khách
 
-### 8.1 Luồng
+Không có form trên web. Khách nhắn thẳng qua **Zalo** (chính), Facebook hoặc Email.
 
 ```
-Website form ──POST──► Google Apps Script (Web App) ──► Google Sheet "Don_Hang"
-                                │
-                                ├──► Email thông báo cho bạn (MailApp)
-                                └──► (tùy chọn) tin nhắn Telegram/Zalo bot
-Claude Code ──GET + token──► Apps Script ──► trả JSON của 1 đơn  (dùng cho /new-case)
+Khách nhắn Zalo ──► Tư vấn viên trả lời (script 5.4) ──► /new-case (paste thông tin) ──► cases/AL-YYMM-NNN/case.yaml
 ```
 
-### 8.2 Cột trong Sheet
-
-`ma_don · thoi_gian · ho_ten · sdt_zalo · email · truong · nganh · bac_hoc · loai_bai · deadline · de_tai · mo_hinh · giai_doan · so_mau · so_mau_yeu_cau · phan_mem · goi_dich_vu · link_tai_lieu · mo_ta · nguon · cam_ket · status · nguoi_phu_trach · bao_gia · da_coc · ngay_ban_giao · ngay_xoa_du_lieu · ghi_chu`
-
-(Các cột từ `status` trở đi do bạn cập nhật tay hoặc Claude Code cập nhật.)
-
-### 8.3 Bảo mật
-
-- Apps Script `doGet` (cho Claude Code đọc đơn) yêu cầu **token bí mật**. Token lưu trong `.env` local và không commit.
-- Sheet chỉ chia sẻ cho bạn và cộng tác viên.
-- Khi có khách đông hơn, nâng cấp lên Supabase mà không phải sửa giao diện form.
+- Mọi thông tin đơn và status lưu trong `case.yaml` của từng case. `/status` liệt kê toàn bộ case và deadline.
+- Thông tin cần hỏi khi tiếp nhận: tên, trường, bậc học, loại bài, deadline, đề tài, mô hình, giai đoạn hiện tại, tình trạng dữ liệu, mục đích dùng data, phần mềm GV yêu cầu.
+- Khi khách đông (> 10 case/tháng) mới cân nhắc thêm form + Google Sheet hoặc Supabase.
 
 ---
 
 ## 9. Cấu trúc thư mục dự án
 
 ```
-Economic_Consulting/
+Economic_Consulting/            # repo github.com/Anhhuhi123/SPSS
+├── index.html                   # website (deploy Vercel)
+├── brand/alpha-lab/             # logo, avatar, ảnh bìa
+├── .vercelignore                # không deploy PLAN.md, README.md, docs/
 ├── PLAN.md                      # file này
 ├── CLAUDE.md                    # hiến pháp cho Claude Code (mục 4 + 6)
 ├── README.md
-├── .env.example                 # APPS_SCRIPT_URL, APPS_SCRIPT_TOKEN
 ├── docs/
-│   ├── market-research.md       # mục 1
+│   ├── PROMPT_redesign.md       # prompt thiết kế web (đã dùng)
 │   ├── services-pricing.md      # mục 3
-│   ├── academic-integrity.md    # mục 4 (bản đầy đủ, dùng làm thỏa thuận dịch vụ)
+│   ├── service-scope.md         # mục 4
 │   ├── consulting-sop.md        # mục 5
 │   ├── analysis-standards.md    # mục 6.4–6.5
 │   └── test-selection.md        # cây chọn kiểm định
-├── .claude/skills/              # new-case, diagnose, design, build-form, clean, analyze, interpret, qa, deliver, revise, status
+├── .claude/skills/              # new-case, diagnose, design, build-form, clean, analyze, interpret, qa, deliver, revise, reply, mock-data, find-dataset, status
 ├── templates/
 │   ├── case/                    # khung thư mục + case.yaml + các file .md mẫu
-│   └── client-docs/             # báo giá, thỏa thuận, README bàn giao, form feedback
+│   └── client-docs/             # báo giá, README bàn giao, form feedback
 ├── toolkit/                     # Python: config, data_engine, stats_engine, export, report
-├── apps-script/
-│   └── Code.gs                  # nhận form → Sheet, email, doGet có token
-├── web/                         # Next.js site
 └── cases/                       # dữ liệu khách (gitignore)
 ```
 
@@ -620,29 +586,29 @@ Economic_Consulting/
 
 ## 10. Lộ trình triển khai
 
-| Phase | Nội dung | Đầu ra | Phụ thuộc |
+| Phase | Nội dung | Đầu ra | Trạng thái |
 |---|---|---|---|
-| **0. Duyệt** | Bạn duyệt file này, chốt các câu ở mục 11 | PLAN.md v2 | n/a |
-| **1. Nền tảng tài liệu** | `CLAUDE.md`, `docs/*`, `templates/*` | Quy trình sẵn sàng, có thể làm khách thủ công ngay | Phase 0 |
-| **2. Website** | Next.js + animation + form + Apps Script + Sheet | Site chạy local, rồi deploy Vercel | Phase 0, link 3 kênh |
-| **3. Skills cho Claude Code** | `.claude/skills/*` | Các lệnh `/new-case` … `/deliver` | Phase 1 |
-| **4. Toolkit Python** | Cài `.venv`, viết module, test bằng mock data | Pipeline cleaning → SPSS → report chạy được | Phase 1, bạn duyệt cài môi trường |
-| **5. Pilot** | 3–5 khách đầu (ưu đãi), thu feedback | Điều chỉnh giá và quy trình | Phase 1–4 |
+| **0. Duyệt** | Chốt tên, dịch vụ, giá | PLAN.md v5 | ✅ |
+| **2. Website** | `index.html` + brand + deploy Vercel | Web chạy online | ✅ (còn link FB/Email, OG) |
+| **1. Nền tảng tài liệu** | `CLAUDE.md`, `docs/*`, `templates/*` | Quy trình sẵn sàng, nhận khách thủ công được | ⏭️ **Làm tiếp theo** |
+| **3. Skills cho Claude Code** | `.claude/skills/*` | Các lệnh `/new-case` … `/deliver` | Chờ Phase 1 |
+| **4. Toolkit Python** | Cài `.venv`, viết module, test bằng mock data | Pipeline cleaning → SPSS → report chạy được | Chờ Phase 1, bạn duyệt cài môi trường |
+| **5. Pilot** | 3–5 khách đầu (ưu đãi), thu feedback | Điều chỉnh giá và quy trình | Chờ Phase 1–4 |
 | **Song song** | Khảo sát xác thực nhu cầu (50–100 sinh viên kinh tế) | Số liệu thật về pain point, dùng làm content | Bất kỳ lúc nào |
 
-Phase 2 và Phase 3–4 có thể làm song song.
+Phase 3 và 4 có thể làm song song.
 
 ---
 
 ## 11. Câu hỏi cần bạn chốt
 
-0. **(v3) Gói Mock Data (150k), Dữ liệu công bố (250k), Combo (350k)** ở mục 3.2: mức giá ổn chưa?
-1. **Framework:** "Nest" là **Next.js** đúng không?
-2. **Tên thương hiệu:** chọn **Rõ Số** hay tên khác ở mục 2.2?
-3. **Bảng giá** ở mục 3.2: đồng ý chưa, có chỉnh mức nào không?
-4. **Ưu đãi ra mắt** giảm 20% cho 10 khách đầu: có làm không?
-5. **Chẩn đoán miễn phí** qua tin nhắn: đồng ý không?
-6. **Ai thực hiện?** (v2: đã rõ là bạn vận hành, Claude Code làm chuyên môn.) Sau này có thêm cộng tác viên không?
-7. **AMOS/SmartPLS:** máy bạn có cài sẵn không? (Phần này cần GUI, Claude Code chỉ hướng dẫn và kiểm tra chéo.)
-8. **Khảo sát xác thực nhu cầu** (mục 10): có muốn mình soạn bộ câu hỏi không?
-9. **Section testimonial:** ẩn lúc ra mắt, hay dùng nội dung mẫu có ghi rõ "minh họa"? (Đề xuất: **ẩn**, vì testimonial giả trái với định vị minh bạch.)
+**Đã chốt:** framework (HTML thuần, không Next.js) · tên **Alpha Lab** · 3 dịch vụ chính + "Dịch vụ khác" và giá trên web · không form/Google Sheet · testimonial: chưa có section.
+
+**Còn mở:**
+
+1. **Mốc giá nội bộ** ở mục 3.2 (mốc dịch vụ 03 và "Dịch vụ khác"): giữ như vậy hay chỉnh?
+2. **Ưu đãi ra mắt** giảm 20% cho 10 khách đầu: có làm không?
+3. **Chẩn đoán miễn phí** qua tin nhắn: đồng ý không?
+4. **Cộng tác viên:** sau này có thêm người không?
+5. **AMOS/SmartPLS:** máy bạn có cài sẵn không? (Cần GUI, Claude Code chỉ hướng dẫn và kiểm tra chéo.)
+6. **Khảo sát xác thực nhu cầu:** có muốn mình soạn bộ câu hỏi không?
