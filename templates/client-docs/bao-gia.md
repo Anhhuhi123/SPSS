@@ -1,6 +1,6 @@
 # Mẫu báo giá (gửi qua Zalo)
 
-> Gửi dạng tin nhắn, không cần file. Thay phần trong `[ ]`. Claude Code điền từ `case.yaml` và `01_assessment.md`, tư vấn viên duyệt rồi gửi.
+> Gửi dạng tin nhắn, không cần file. Thay phần trong `[ ]`. **Số tài khoản do nhân viên gửi riêng** khi trao đổi, không có trong mẫu. Claude Code điền từ `case.yaml` và `01_assessment.md`, tư vấn viên duyệt rồi gửi.
 
 ```
 📋 BÁO GIÁ – ALPHA LAB
@@ -25,7 +25,6 @@ Mã hồ sơ: [AL-YYMM-NNN]
 
 ℹ️ Alpha Lab hỗ trợ xử lý & giải thích dữ liệu; nguồn dữ liệu luôn được ghi rõ.
 
-Thông tin chuyển khoản: [ngân hàng – STK – tên]
 Nội dung CK: [AL-YYMM-NNN] [tên]
 ```
 
