@@ -530,7 +530,7 @@ mục tiêu (so sánh nhóm / quan hệ / dự báo / đo lường) → loại b
 |---|---|---|
 | 0 | Navbar | Logo Alpha Lab, link Dịch vụ / Liên hệ, nút đổi theme |
 | 1 | Hero (`#top`) | "Make every number make sense." + CTA |
-| 2 | Dịch vụ (`#dich-vu`) | 3 thẻ 01 → 02 → 03 (thẻ 03 "Phổ biến nhất") + thẻ ngang **"Dịch vụ khác"** (báo giá theo yêu cầu) |
+| 2 | Dịch vụ (`#dich-vu`) | 4 thẻ ngang hàng: 01 → 02 → 03 (thẻ 03 "Phổ biến nhất") + 04 **"Dịch vụ khác"** (báo giá theo yêu cầu). Desktop 4 cột, tablet 2 cột, mobile 1 cột |
 | 3 | Liên hệ (`#lien-he`) | Zalo (chính), Facebook, Email |
 | 4 | Footer | Logo, link liên hệ |
 | n/a | Nút nổi | "Chat Zalo" góc dưới phải |

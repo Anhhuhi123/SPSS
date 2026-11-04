@@ -114,7 +114,7 @@ h2{font-size:clamp(30px,5vw,48px);text-align:center}
 @media (max-width:900px){.section{padding:80px 0}}
 
 /* Services */
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px}
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:56px}
 .service{position:relative;display:flex;flex-direction:column;gap:16px;height:100%;padding:28px;border-radius:24px;border:1px solid rgba(var(--fg),.1);background:rgba(var(--fg),.025);
   transition:transform .25s,border-color .25s,background .25s,box-shadow .25s}
 .service:hover{transform:translateY(-4px);border-color:rgba(var(--fg),.2);background:rgba(var(--fg),.05);box-shadow:var(--shadow)}
@@ -138,13 +138,9 @@ h2{font-size:clamp(30px,5vw,48px);text-align:center}
 .price b{font-size:28px;font-weight:700;letter-spacing:-.02em;line-height:1.1}
 .price span{font-size:14px;color:rgba(var(--fg),.55)}
 .services__note{margin-top:28px;font-size:14px;color:rgba(var(--fg),.55);text-align:center}
-.services__wide{grid-column:1/-1}
-.service--other{display:grid;grid-template-columns:1fr 1.5fr;gap:16px 48px;align-items:start}
-.service--other__head{display:flex;flex-direction:column;gap:16px}
-.service--other__desc{font-size:14px;color:rgba(var(--fg),.65)}
-.service--other ul{grid-template-columns:1fr 1fr;gap:12px 24px;padding-top:4px}
-@media (max-width:980px){.services{grid-template-columns:1fr;max-width:560px;margin-inline:auto}.service--other{grid-template-columns:1fr}}
-@media (max-width:560px){.service--other ul{grid-template-columns:1fr}}
+.price--text b{font-size:22px}
+@media (max-width:1100px){.services{grid-template-columns:repeat(2,1fr);max-width:760px;margin-inline:auto}}
+@media (max-width:640px){.services{grid-template-columns:1fr;max-width:560px}}
 
 /* Contact */
 .contact{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
@@ -309,19 +305,14 @@ h2{font-size:clamp(30px,5vw,48px);text-align:center}
       </div>
 
       <!-- 04: Dịch vụ khác -->
-      <div class="reveal services__wide" style="--delay:.24s">
-      <article class="service service--other">
-        <div class="service--other__head">
-          <div class="service__top">
-            <div class="service__icon"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg></div>
-            <span class="service__num mono">+</span>
-          </div>
-          <h3>Dịch vụ khác</h3>
-          <p class="service__en">Other Services</p>
-          <p class="service--other__desc">Nhu cầu của bạn chưa có ở trên? Nhắn tư vấn viên để được báo giá riêng.</p>
-          <div class="price"><small>Báo giá</small><b>theo yêu cầu</b></div>
-          <a href="#lien-he" class="pill pill--glass pill--block">Nhận tư vấn</a>
+      <div class="reveal" style="--delay:.24s">
+      <article class="service">
+        <div class="service__top">
+          <div class="service__icon"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg></div>
+          <span class="service__num mono">04</span>
         </div>
+        <h3>Dịch vụ khác</h3>
+        <p class="service__en">Other Services</p>
         <ul>
           <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Mock data theo mô hình để chạy thử</li>
           <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Tìm bộ dữ liệu đã công bố, có trích nguồn</li>
@@ -330,6 +321,9 @@ h2{font-size:clamp(30px,5vw,48px);text-align:center}
           <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Đồng hành trọn đề tài đến ngày bảo vệ</li>
           <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Yêu cầu khác về số liệu</li>
         </ul>
+        <div class="service__deliver"><b class="mono">Bàn giao</b><div class="files"><span>Tùy theo dịch vụ</span></div></div>
+        <div class="price price--text"><small>Báo giá</small><b>theo yêu cầu</b></div>
+        <a href="#lien-he" class="pill pill--glass pill--block">Nhận tư vấn</a>
       </article>
       </div>
     </div>
