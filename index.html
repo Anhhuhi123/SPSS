@@ -3,8 +3,33 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Alpha Lab — Xử lý số liệu SPSS cho sinh viên</title>
+<title>Alpha Lab – Xử lý số liệu SPSS cho sinh viên kinh tế</title>
+<meta name="description" content="Hỗ trợ thu thập khảo sát, làm sạch dữ liệu và chạy SPSS (Cronbach's Alpha, EFA, hồi quy, ANOVA) cho tiểu luận, NCKH, khóa luận. Có giải thích kết quả, báo giá qua Zalo trong 24h." />
+<meta name="theme-color" content="#09090d" />
 <link rel="icon" href="brand/alpha-lab/mark.svg" type="image/svg+xml" />
+<!-- Open Graph: khung xem trước khi share link lên Facebook / Zalo.
+     TODO(pending): khi có link Vercel / domain, đổi og:image thành URL tuyệt đối (https://.../brand/alpha-lab/cover-facebook.png), thêm og:url + <link rel="canonical"> -->
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="vi_VN" />
+<meta property="og:site_name" content="Alpha Lab" />
+<meta property="og:title" content="Alpha Lab – Xử lý số liệu SPSS cho sinh viên kinh tế" />
+<meta property="og:description" content="Thu thập khảo sát, làm sạch dữ liệu, chạy Cronbach, EFA, hồi quy và giải thích kết quả dễ hiểu. Nhắn Zalo để được báo giá trong 24h." />
+<meta property="og:image" content="brand/alpha-lab/cover-facebook.png" />
+<meta property="og:image:width" content="1640" />
+<meta property="og:image:height" content="624" />
+<meta name="twitter:card" content="summary_large_image" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Alpha Lab",
+  "description": "Dịch vụ thu thập khảo sát, xử lý dữ liệu và phân tích SPSS cho sinh viên kinh tế: Cronbach's Alpha, EFA, tương quan, hồi quy, T-test/ANOVA, kèm giải thích kết quả.",
+  "areaServed": "VN",
+  "availableLanguage": "vi",
+  "priceRange": "1.000đ – 3.500.000đ",
+  "sameAs": ["https://zalo.me/0905889328"]
+}
+</script>
 <script>
 // Default = dark; remembers the visitor's choice
 try{const t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t}catch(e){}
@@ -142,6 +167,35 @@ h2{font-size:clamp(30px,5vw,48px);text-align:center}
 @media (max-width:1100px){.services{grid-template-columns:repeat(2,1fr);max-width:760px;margin-inline:auto}}
 @media (max-width:640px){.services{grid-template-columns:1fr;max-width:560px}}
 
+/* Process: vertical timeline, line fills as you scroll */
+.steps{position:relative;max-width:760px;margin:56px auto 0;display:grid;gap:20px;list-style:none}
+.steps::before,.steps::after{content:"";position:absolute;left:23px;top:24px;bottom:24px;width:2px;border-radius:2px}
+.steps::before{background:rgba(var(--fg),.1)}
+.steps::after{background:linear-gradient(180deg,rgb(var(--fg)),rgba(var(--fg),.35));transform-origin:top;transform:scaleY(var(--p,0));transition:transform .15s linear}
+.step{position:relative;display:grid;grid-template-columns:48px 1fr;gap:20px;align-items:start}
+.step__num{position:relative;z-index:1;width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:16px;font-weight:600;
+  background:var(--bg);color:rgba(var(--fg),.5);border:1px solid rgba(var(--fg),.2);box-shadow:0 0 0 6px var(--bg);transition:background .3s,color .3s,border-color .3s}
+.step.on .step__num{background:var(--solid);color:var(--on-solid);border-color:var(--solid)}
+.step__card{padding:20px 24px;border-radius:20px;border:1px solid rgba(var(--fg),.1);background:rgba(var(--fg),.025);transition:transform .25s,border-color .25s,background .25s,box-shadow .25s}
+.step__card:hover{transform:translateY(-3px);border-color:rgba(var(--fg),.2);background:rgba(var(--fg),.05);box-shadow:var(--shadow)}
+.step__card h3{font-size:18px;font-weight:600;letter-spacing:-.01em}
+.step__card p{margin-top:6px;font-size:14.5px;color:rgba(var(--fg),.7)}
+.step__out{display:inline-flex;align-items:center;gap:6px;margin-top:12px;padding:3px 10px;border-radius:6px;border:1px solid rgba(var(--fg),.15);background:rgba(var(--fg),.04);font-size:12px;color:rgba(var(--fg),.8)}
+.step__out svg{width:12px;height:12px;stroke:currentColor;stroke-width:2.5;fill:none}
+.steps__note{margin-top:28px;font-size:14px;color:rgba(var(--fg),.55);text-align:center}
+@media (max-width:560px){.steps::before,.steps::after{left:19px;top:20px;bottom:20px}.step{grid-template-columns:40px 1fr;gap:14px}.step__num{width:40px;height:40px;border-radius:12px;font-size:14px}.step__card{padding:16px 18px}}
+
+/* FAQ: native <details> accordion */
+.faq{max-width:760px;margin:56px auto 0;display:grid;gap:12px}
+.faq details{border-radius:18px;border:1px solid rgba(var(--fg),.1);background:rgba(var(--fg),.025);transition:border-color .25s,background .25s}
+.faq details[open]{border-color:rgba(var(--fg),.2);background:rgba(var(--fg),.05)}
+.faq summary{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px;padding:16px 22px;font-weight:600;font-size:15.5px;cursor:pointer;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary svg{flex:none;width:18px;height:18px;stroke:rgba(var(--fg),.6);stroke-width:2;fill:none;transition:transform .25s var(--ease)}
+.faq details[open] summary svg{transform:rotate(45deg)}
+.faq summary:focus-visible{outline:2px solid rgb(var(--fg));outline-offset:2px;border-radius:18px}
+.faq details p{padding:0 22px 18px;font-size:14.5px;color:rgba(var(--fg),.72)}
+
 /* Contact */
 .contact{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
 .contact h2,.contact .sub{text-align:left;margin-left:0}
@@ -190,6 +244,7 @@ h2{font-size:clamp(30px,5vw,48px);text-align:center}
   .star{animation:none;opacity:.3}
   .comet{display:none}
   .fab::before{animation:none}
+  .steps::after{transition:none}
 }
 </style>
 </head>
@@ -205,6 +260,8 @@ h2{font-size:clamp(30px,5vw,48px);text-align:center}
     <a href="#top" class="brand"><span class="brand__mark"><svg viewBox="0 0 64 64"><defs><clipPath id="tail"><rect x="40" y="0" width="24" height="64"/></clipPath></defs><path d="M10 46 C21 46 24 18 32 18 S43 46 54 46 Z" fill="#14B8A6" clip-path="url(#tail)"/><path d="M10 46 C21 46 24 18 32 18 S43 46 54 46" stroke="currentColor" stroke-width="4.5" fill="none" stroke-linecap="round"/></svg></span>Alpha Lab</a>
     <nav class="nav__links">
       <a href="#dich-vu">Dịch vụ</a>
+      <a href="#quy-trinh">Quy trình</a>
+      <a href="#hoi-dap">Hỏi đáp</a>
       <a href="#lien-he">Liên hệ</a>
     </nav>
     <div class="nav__spacer"></div>
@@ -332,6 +389,66 @@ h2{font-size:clamp(30px,5vw,48px);text-align:center}
 </section>
 
 <!-- CONTACT -->
+<!-- PROCESS -->
+<section class="section" id="quy-trinh">
+  <div class="container">
+    <h2 class="reveal">6 bước,<br/><span class="grad">mỗi bước có đầu ra rõ ràng.</span></h2>
+    <p class="sub reveal" style="--delay:.08s">Bạn luôn biết mình đang ở đâu và sẽ nhận được gì.</p>
+
+    <ol class="steps" id="steps">
+      <li class="step reveal"><span class="step__num mono">1</span>
+        <div class="step__card"><h3>Chẩn đoán</h3>
+          <p>Nhận đề tài, mô hình, bảng hỏi và yêu cầu của giảng viên qua Zalo. Xác định bạn đang mắc ở đâu.</p>
+          <span class="step__out"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Đánh giá + báo giá trong 24h</span></div></li>
+      <li class="step reveal"><span class="step__num mono">2</span>
+        <div class="step__card"><h3>Thiết kế phân tích</h3>
+          <p>Kiểm tra biến, thang đo, cỡ mẫu. Chọn kiểm định đúng với câu hỏi nghiên cứu của bạn.</p>
+          <span class="step__out"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Kế hoạch phân tích</span></div></li>
+      <li class="step reveal"><span class="step__num mono">3</span>
+        <div class="step__card"><h3>Dữ liệu</h3>
+          <p>Thu khảo sát qua Google Form, dùng data bạn đã có, hoặc mock data / bộ dữ liệu đã công bố cùng chủ đề.</p>
+          <span class="step__out"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Dữ liệu sẵn sàng (.xlsx)</span></div></li>
+      <li class="step reveal"><span class="step__num mono">4</span>
+        <div class="step__card"><h3>Làm sạch</h3>
+          <p>Xử lý thiếu, trùng phiếu, câu đảo chiều, giá trị bất thường, mã hóa biến. Mọi thay đổi đều được ghi lại.</p>
+          <span class="step__out"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>.sav sạch + Cleaning log</span></div></li>
+      <li class="step reveal"><span class="step__num mono">5</span>
+        <div class="step__card"><h3>Chạy phân tích</h3>
+          <p>Thống kê mô tả, Cronbach's Alpha, EFA, tương quan, hồi quy, T-test / ANOVA, tùy mô hình.</p>
+          <span class="step__out"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>.sps · Output · Bảng kết quả</span></div></li>
+      <li class="step reveal"><span class="step__num mono">6</span>
+        <div class="step__card"><h3>Giải thích &amp; bàn giao</h3>
+          <p>Giải thích từng bảng, đối chiếu giả thuyết, gợi ý cách trình bày. Hỏi lại qua Zalo thoải mái trong 30 ngày.</p>
+          <span class="step__out"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Báo cáo kết quả + hỗ trợ 30 ngày</span></div></li>
+    </ol>
+    <p class="steps__note reveal">Bạn chọn dịch vụ nào thì đi qua các bước tương ứng, không bắt buộc đủ cả 6 bước.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="hoi-dap">
+  <div class="container">
+    <h2 class="reveal">Câu hỏi<br/><span class="grad">thường gặp.</span></h2>
+
+    <div class="faq">
+      <details class="reveal"><summary>Giá trên web đã là giá cuối chưa?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary>
+        <p>Giá trên web là mức khởi điểm. Giá cụ thể tùy số biến, số kiểm định và deadline của bạn. Bạn gửi tài liệu qua Zalo, bên mình xem và báo giá trong 24h.</p></details>
+      <details class="reveal"><summary>Mình chưa có data thì làm sao?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary>
+        <p>Có 3 cách: bên mình hỗ trợ dựng Google Form và thu khảo sát; dựng mock data theo đúng mô hình để bạn chạy thử ngay; hoặc tìm bộ dữ liệu đã công bố cùng chủ đề. Nhắn đề tài và mô hình để được tư vấn cách phù hợp.</p></details>
+      <details class="reveal"><summary>Cronbach / EFA của mình không đạt thì sao?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary>
+        <p>Bên mình tìm nguyên nhân (câu đảo chiều chưa mã hóa, phiếu trả lời qua loa, thang đo đo hai khái niệm…) và xử lý theo tiêu chí thống kê, có ghi log để bạn trình bày lại được.</p></details>
+      <details class="reveal"><summary>Mình nhận được những file gì?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary>
+        <p>Tùy dịch vụ: data sạch (.xlsx / .sav), syntax SPSS (.sps), bảng kết quả, cleaning log và báo cáo giải thích từng bảng bằng tiếng Việt. Bạn chạy lại file syntax là ra đúng kết quả.</p></details>
+      <details class="reveal"><summary>Bao lâu thì xong?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary>
+        <p>Xử lý dữ liệu: 1–2 ngày. Phân tích SPSS: 1–4 ngày tùy số kiểm định. AMOS / SmartPLS: 4–7 ngày. Thu khảo sát tùy số phiếu cần. Cần gấp dưới 48h thì phụ phí 30% nếu lịch còn trống.</p></details>
+      <details class="reveal"><summary>Thanh toán thế nào? Giảng viên bắt sửa thì sao?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary>
+        <p>Cọc 50% khi chốt, 50% khi bàn giao. Sửa theo góp ý của giảng viên trong phạm vi dịch vụ đã chọn được miễn phí 2 lần trong 30 ngày.</p></details>
+      <details class="reveal"><summary>Thông tin của mình có được bảo mật không?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary>
+        <p>Có. Data chỉ dùng cho bài của bạn, không chia sẻ cho ai, và được xóa sau 90 ngày kể từ khi bàn giao (hoặc sớm hơn nếu bạn yêu cầu).</p></details>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="lien-he">
   <div class="container contact">
     <div class="reveal">
@@ -421,6 +538,20 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{
   if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
 }),{threshold:.15});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// ── Process timeline: line fills with scroll, step numbers light up as the line reaches them ──
+(()=>{
+  const list=document.getElementById('steps'); if(!list) return;
+  const steps=[...list.querySelectorAll('.step')];
+  const still=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  const update=()=>{
+    const r=list.getBoundingClientRect(), mark=innerHeight*.6;
+    const p=still?1:Math.min(1,Math.max(0,(mark-r.top)/r.height));
+    list.style.setProperty('--p',p.toFixed(3));
+    steps.forEach(s=>s.classList.toggle('on',still||s.getBoundingClientRect().top+24<=mark));
+  };
+  addEventListener('scroll',update,{passive:true});addEventListener('resize',update);update();
+})();
 </script>
 </body>
 </html>

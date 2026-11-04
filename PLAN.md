@@ -528,17 +528,20 @@ mục tiêu (so sánh nhóm / quan hệ / dự báo / đo lường) → loại b
 
 | # | Section | Nội dung |
 |---|---|---|
-| 0 | Navbar | Logo Alpha Lab, link Dịch vụ / Liên hệ, nút đổi theme |
+| 0 | Navbar | Logo Alpha Lab, link Dịch vụ / Quy trình / Hỏi đáp / Liên hệ, nút đổi theme |
 | 1 | Hero (`#top`) | "Make every number make sense." + CTA |
 | 2 | Dịch vụ (`#dich-vu`) | 4 thẻ ngang hàng: 01 → 02 → 03 (thẻ 03 "Phổ biến nhất") + 04 **"Dịch vụ khác"** (báo giá theo yêu cầu). Desktop 4 cột, tablet 2 cột, mobile 1 cột |
-| 3 | Liên hệ (`#lien-he`) | Zalo (chính), Facebook, Email |
-| 4 | Footer | Logo, link liên hệ |
+| 3 | Quy trình (`#quy-trinh`) | Timeline dọc 6 bước, mỗi bước có nhãn đầu ra; đường kẻ tô dần khi cuộn |
+| 4 | Hỏi đáp (`#hoi-dap`) | 7 câu FAQ dạng xổ xuống (`<details>`) |
+| 5 | Liên hệ (`#lien-he`) | Zalo (chính), Facebook, Email |
+| 6 | Footer | Logo, link liên hệ |
 | n/a | Nút nổi | "Chat Zalo" góc dưới phải |
 
 ### 7.3 Việc còn lại
 
 - [ ] Link Facebook và Email (đang `href="#"`, có ghi chú `TODO(pending)`).
-- [ ] Sau khi có domain: thêm `meta description`, ảnh Open Graph (dùng `cover-facebook.png`) để share lên Facebook/Zalo có ảnh xem trước.
+- [x] SEO cơ bản: title, meta description, Open Graph, schema `ProfessionalService`, `robots.txt`.
+- [ ] Khi có link Vercel / domain: đổi `og:image` sang URL tuyệt đối, thêm `og:url`, `canonical`, `sitemap.xml`, đăng ký Google Search Console.
 - [ ] (Tùy chọn) Google Analytics 4 / Meta Pixel nếu chạy quảng cáo.
 
 ---
